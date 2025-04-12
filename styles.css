@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+aside {
+  background-color: rgb(82, 164, 164);
+  grid-row: 1 / 3;
+
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+aside > * > * {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+}
+
+aside > nav > * {
+  margin: 2rem 0 1.5rem 1rem;
+}
+
+.svg-logo-container {
+  width: 60px;
+  height: 60px;
+}
+
+.svg-container {
+  width: 35px;
+  height: 35px;
+}

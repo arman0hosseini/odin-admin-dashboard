@@ -10,11 +10,11 @@ body {
   font-family: "Roboto", sans-serif;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 aside {
-  background-color: rgb(82, 164, 164);
+  background-color: #5f8b4c;
   grid-row: 1 / 3;
 
   padding: 1rem;
@@ -26,7 +26,7 @@ aside > * > * {
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-left: 0.5rem;
 }
 
@@ -45,7 +45,8 @@ aside > nav > * {
 }
 
 header {
-  background-color: pink;
+  background-color: #ff9a9a;
+  height: 220px;
 }
 
 header .header-first-row {
@@ -153,8 +154,57 @@ header .header-buttons button {
   width: 100px;
   border-radius: 30px;
   border: 0;
-  background-color: rgb(82, 164, 164);
+  background-color: #5f8b4c;
   color: white;
   font-size: 1rem;
   font-weight: 600;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: #ffddab;
+}
+
+main .your-projects {
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+main .announcement {
+  grid-column: 2/3;
+}
+
+main .trending {
+  grid-column: 2/3;
+}
+
+main .cards-container {
+  margin: 1.5rem 0 0 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+main .cards-container p {
+}
+
+main .cards-container .card {
+  height: 200px;
+  background-color: beige;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 10px solid #945034;
+  display: grid;
+  grid-template-rows: 30px 100px 1fr;
+}
+
+main .cards-container .card .icons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+main .cards-container .card .icons-container > * {
+  width: 30px;
 }

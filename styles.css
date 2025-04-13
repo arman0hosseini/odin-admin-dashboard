@@ -16,10 +16,9 @@ body {
 aside {
   background-color: #5f8b4c;
   grid-row: 1 / 3;
-
+  color: #ffe6c0;
   padding: 1rem;
   display: grid;
-  gap: 2rem;
 }
 
 aside > * > * {
@@ -32,6 +31,10 @@ aside > * > * {
 
 aside > nav > * {
   margin: 2rem 0 1.5rem 1rem;
+}
+
+aside svg path {
+  fill: #7b3618;
 }
 
 .svg-logo-container {
@@ -94,11 +97,13 @@ header .bell-icon {
 }
 
 header .pfp-container {
-  width: 65px;
+  width: 60px;
+  height: 60px;
 }
 
 header .pfp-container img {
   width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -131,11 +136,13 @@ header .big-name p:last-child {
 }
 
 header .big-profile {
-  width: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 header .big-profile img {
   width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -162,17 +169,34 @@ header .header-buttons button {
 
 main {
   display: grid;
+  gap: 1rem;
   grid-template-columns: 3fr 1fr;
   background-color: #ffddab;
+  padding: 1rem;
 }
 
 main .your-projects {
   margin-top: 1.5rem;
-  padding: 1rem;
+  grid-row: 1/3;
+}
+
+main .announcements {
+  grid-column: 2/3;
+  margin-top: 1.5rem;
 }
 
 main .announcement {
-  grid-column: 2/3;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dotted gray;
+}
+
+main .announcement-container {
+  margin-top: 1.2rem;
+  background-color: beige;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
 }
 
 main .trending {
@@ -180,17 +204,14 @@ main .trending {
 }
 
 main .cards-container {
-  margin: 1.5rem 0 0 0.5rem;
+  margin-top: 1.2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
 
-main .cards-container p {
-}
-
 main .cards-container .card {
-  height: 200px;
+  height: 220px;
   background-color: beige;
   padding: 1rem;
   border-radius: 10px;
@@ -207,4 +228,31 @@ main .cards-container .card .icons-container {
 
 main .cards-container .card .icons-container > * {
   width: 30px;
+}
+
+main .trending .trends-container .profile-pic {
+  width: 50px;
+  height: 50px;
+}
+main .trending .trends-container .profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+main .trending .trends-container {
+  margin-top: 1.2rem;
+  background-color: beige;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
+}
+
+main .trending .trends-container .trend {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
 }
